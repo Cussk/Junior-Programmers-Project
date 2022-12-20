@@ -6,7 +6,7 @@ using UnityEngine;
 public class MainManager : MonoBehaviour
 {
     //shares values in this class member with all instances of MainManager class
-    public static MainManager Instance;
+    public static MainManager Instance { get; private set; } //makes MainManager read-only outside of class, can edit in class
 
     public Color TeamColor;
 
